@@ -1,0 +1,72 @@
+
+.normal-border {
+    @apply border-[1px] border-gray-600 border-opacity-60;
+}
+
+.flex-between {
+    @apply flex justify-between items-center;
+}
+
+.flex-center {
+    @apply flex items-center justify-center;
+}
+
+.input-outline {
+    @apply rounded-2xl focus-within:border-[4px] hover:border-[4px] border-primary border-opacity-30 transition;
+}
+
+.input-outline-active {
+    @apply border-[4px] border-primary border-opacity-30 transition;
+}
+
+.input-wrapper {
+    @apply rounded-xl normal-border w-[320px] h-[52px] hover:border-primary transition flex-between px-3 gap-2;
+}
+
+.main-input {
+    @apply bg-transparent text-black w-[80%] border-none outline-none ;
+}
+
+@keyframes dropdownAnim {
+    0% {
+        transform: scale(0.9) translateY(-20px);
+    }
+    100% {
+        transform: scale(1) translateY(0);
+    }
+}
+
+.dropdown {
+    @apply absolute top-[105%] rounded-xl max-h-[300px] min-h-[164px] overflow-x-hidden overflow-y-auto w-full p-3;
+    @apply border-[1px] border-gray-400 border-opacity-40 shadow-md;
+}
+
+.dropdown-anim {
+    animation: dropdownAnim 0.3s forwards;
+}
+
+.dropdown-item {
+    @apply py-3 px-3 rounded-md hover:bg-primaryHover flex-between cursor-pointer my-1;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+    height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgb(156 163 175);
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #5e6673;
+}
